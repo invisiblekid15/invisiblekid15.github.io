@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brij Vaid - Tech Leader & AI Entrepreneur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #f8f9fa;
+            font-size: 13px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .header .title {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 0 30px 20px;
+        }
+        
+        .section {
+            margin: 25px 0;
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+            color: #4a5568;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #667eea;
+            display: inline-block;
+        }
+        
+        .summary {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #4a5568;
+            text-align: justify;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 3px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .company {
+            font-size: 1rem;
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        .duration {
+            font-size: 0.9rem;
+            color: #718096;
+            font-weight: 500;
+        }
+        
+        .achievements {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .achievements li {
+            margin-bottom: 6px;
+            padding-left: 15px;
+            position: relative;
+            color: #4a5568;
+            line-height: 1.4;
+            font-size: 0.95rem;
+        }
+        
+        .achievements li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 0.7rem;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .skill-category h4 {
+            color: #2d3748;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .product-card {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .product-card h4 {
+            color: #2d3748;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        
+        .product-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .product-description {
+            color: #4a5568;
+            margin-top: 5px;
+            line-height: 1.3;
+            font-size: 0.9rem;
+        }
+        
+        .education-awards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .education {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .education h3 {
+            font-size: 1rem;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        .education p {
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+        
+        .awards {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .award-item {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                font-size: 12px;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: none;
+            }
+            
+            .header {
+                padding: 20px 25px;
+            }
+            
+            .content {
+                padding: 0 25px 15px;
+            }
+            
+            .section {
+                margin: 20px 0;
+            }
+            
+            .experience-item {
+                margin-bottom: 15px;
+                padding: 12px;
+            }
+            
+            .achievements li {
+                margin-bottom: 4px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .two-column,
+            .skills-grid,
+            .products-grid,
+            .education-awards {
+                grid-template-columns: 1fr;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Brij Vaid</h1>
+            <p class="title">Tech Leader | AI Entrepreneur | Startup CTO</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 <a href="mailto:brij@neusort.com">brij@neusort.com</a>
+                </div>
+                <div class="contact-item">
+                    📱 +91 88026 37902
+                </div>
+                <div class="contact-item">
+                    🔗 <a href="https://linkedin.com/in/brijvaid">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Executive Summary</h2>
+                <p class="summary">
+                    Proven CTO and AI entrepreneur with 8+ years building customer-facing products from 0-to-1. Former Tech Lead at MakeMyTrip managing millions of transactions. Co-Founder of AI hiring platforms with 84% interview-to-offer ratio. Expert in rapid prototyping, AI/ML, microservices, and scaling teams. Patent holder with deep system architecture expertise.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Co-Founder & CTO</div>
+                            <div class="company">Neusort & TechHyrr</div>
+                        </div>
+                        <div class="duration">Jan 2024 - Present</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Built AI hiring platform (B2B/B2C) with 84% interview-to-offer ratio, serving enterprise clients</li>
+                        <li>Developed multiple AI assessment engines: algorithm, programming, psychology-based games</li>
+                        <li>Architected scalable microservices handling thousands of concurrent AI interviews</li>
+                        <li>Led product development from concept to customer-ready with direct user engagement</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Lead Software Engineer</div>
+                            <div class="company">MakeMyTrip</div>
+                        </div>
+                        <div class="duration">May 2021 - Jan 2024</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Transformed monolith to microservices, increasing scalability by 400%</li>
+                        <li>Reduced production costs by 20% through optimization and auto-scaling</li>
+                        <li>Built real-time data scraping system for flight delays, enhancing reliability</li>
+                        <li>Improved team efficiency by 60% through automation and technical leadership</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Software Engineer</div>
+                            <div class="company">Indus Valley Partners</div>
+                        </div>
+                        <div class="duration">June 2016 - Aug 2018</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Developed ESMA-compliant real-time reporting system in 2 months</li>
+                        <li>Built high-speed rule engine for compliance monitoring</li>
+                        <li>Promoted to product team in 6 months as top performer</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">AI Products & Platforms</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <h4><a href="https://neusort.com">Neusort.com</a></h4>
+                        <p class="product-description">B2B AI hiring platform with automated technical interviews for enterprises</p>
+                    </div>
+                    <div class="product-card">
+                        <h4><a href="https://techyrr.com">TechHyrr.com</a></h4>
+                        <p class="product-description">B2C platform for developers using same AI assessment engine</p>
+                    </div>
+                    <div class="product-card">
+                        <h4><a href="https://games.hyrr.app">Games.Hyrr.app</a></h4>
+                        <p class="product-description">Psychology-based game assessments reducing hiring bias</p>
+                    </div>
+                    <div class="product-card">
+                        <h4><a href="https://sutragraph.com">Sutragraph.com</a></h4>
+                        <p class="product-description">Open-source AI coding agent in terminal with system context</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>AI/ML & Automation</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AI Agents</span>
+                            <span class="skill-tag">ML Pipelines</span>
+                            <span class="skill-tag">Test Automation</span>
+                            <span class="skill-tag">NLP</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Infrastructure & Backend</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Leadership & Strategy</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Team Management</span>
+                            <span class="skill-tag">System Architecture</span>
+                            <span class="skill-tag">Product Strategy</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Development Tools</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AI Coding Tools</span>
+                            <span class="skill-tag">Real-time Systems</span>
+                            <span class="skill-tag">Database Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Education & Recognition</h2>
+                <div class="education-awards">
+                    <div class="education">
+                        <h3>B.Tech Software Engineering</h3>
+                        <p>Delhi Technological University (2012-2016)</p>
+                    </div>
+                    <div class="awards">
+                        <span class="award-item">Patent Holder (2 Patents)</span>
+                        <span class="award-item">MakeMyTrip Star Performer</span>
+                        <span class="award-item">Best HR Startup - NHRD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
